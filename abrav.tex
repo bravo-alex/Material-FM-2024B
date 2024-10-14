@@ -1,0 +1,47 @@
+% -- Formato para ejemplos
+\newtheoremstyle{estiloejemplo}%
+    {9pt}{9pt}%
+    {}%
+    {0pt}%
+    {\bfseries\scshape}{.}%
+    { }%
+    {}
+
+% -- Ambiente para ejemplos
+\theoremstyle{estiloejemplo}
+    \newtheorem{ejemplo}{Ejemplo}
+    \newtheorem*{see}{Observación}
+\newtheorem{exer}{Ejercicio}[]
+
+% -- Formato para teoremas
+\newtheoremstyle{estiloteorema}%
+    {9pt}{9pt}%
+    {\slshape }%\slshape
+    {0pt}%
+    {\bfseries \scshape }{.}%
+    { }%\scshape
+    {}
+
+% -- Ambiente para teoremas
+\theoremstyle{estiloteorema}
+    \newtheorem{defi}{Definición}[section]
+    \newtheorem{axioma}{Axioma}
+    \newtheorem{teorema}{Teorema}[section]
+    \newtheorem{corolario}{Corolario}[section]
+    \newtheorem{proposicion}[teorema]{Proposición}
+    \newtheorem{lema}{Lema}
+    \newtheorem{notacion}{Notaci\'on}
+%\newtheorem{lema}[teorema]{Lema}
+\newcommand{\encabezado}{\begin{figure}
+    \includegraphics[scale=0.012]{epn.png} \hfill
+   \includegraphics[scale=0.045]{facu.png}
+\end{figure}
+\vspace*{-1.8cm}
+\hspace{1cm}{{\textbf{Análisis Real }}} \hspace{6cm}  \textit{\textbf{Semestre:} 2021-A}
+\vspace*{0.43cm}
+{\hrule height 1.4pt}
+\begin{center}
+    {\textbf{Taller No.1}}
+\end{center} 
+\textbf{Nombre:} Alex Wladimir Bravo Quisaguano \hfill \textbf{Fecha:} \today}
+\allowdisplaybreaks 

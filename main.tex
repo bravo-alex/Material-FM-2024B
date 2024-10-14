@@ -1,0 +1,993 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb,amsthm,mathrsfs,ifthen,array}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-nolayout]{babel}
+\usepackage{abcomandos}
+\usepackage[a4paper, left=2.5cm,right=2.5cm, top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{graphicx} 
+\usepackage{subcaption} 
+\input{abrav.tex}
+\usepackage{tikz}
+\usepackage{enumitem}
+
+\setlength{\parindent}{0pt} 
+\usepackage{xcolor}
+\title{Razones trigonometr\'icas en un tri\'angulo rect\'angulo}
+\author{Clavemat}
+\date{Alex Bravo }
+
+\begin{document}
+%encabezado
+\begin{figure}[h!]
+    \begin{minipage}[t]{0.45\textwidth}
+        \flushleft \includegraphics[height=2.5cm]{clave.jpg}
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.45\textwidth}
+        \flushright \includegraphics[height=2.5cm]{poli.png}
+    \end{minipage}
+\end{figure}
+\begin{center}
+    {\Large \textsc{\textbf{Razones Trigonométricas en un Triángulo Rectángulo}}}
+\end{center}
+{}
+\begin{flushleft}
+    \textsc{\large { \textbf{Elaborado por:} ALEX BRAVO}}
+\end{flushleft}
+\section{Introducci\'on}
+El presente documento tiene como finalidad estudiar las relaciones que existen entre las longitudes de los lados y las medidas de los \'angulos de un tri\'angulo.\\
+
+Debemos tener presente que \textbf{NO} vamos a estudiar el concepto de \textit{funci\'on trigonom\'etrica}, puesto que para un mejor abordaje del mencionado tema,  es necesario tener presente la noci\'on de raz\'on trigonom\'etrica. Una vez aclarado eso, nuestro objetivo es realizar un estudio de las razones trigonom\'etricas de \'angulos agudos de un tri\'angulo rect\'angulo y poner en pr\'actica con un listado de ejercicios.\\
+
+Presentamos a continuaci\'on, la siguiente definici\'on:
+\begin{defi}[Razones trigonom\'etricas de un \'angulo agudo] Dado un \'angulo agudo $\angle A$ de un tri\'angulo rect\'angulo cualquiera. Entonces: 
+\begin{enumerate}
+    \item El \textbf{SENO} es el cociente entre las longitudes del cateto opuesto al \'angulo $\angle A$ del tri\'angulo rect\'angulo y su hipotenusa. A este cociente, lo vamos a representar por $\sen \angle A$.
+    \item El \textbf{COSENO} es el cociente entre las longitudes del cateto adyacente  al \'angulo $\angle A$ del tri\'angulo rect\'angulo y su hipotenusa. A este cociente, lo vamos a representar por $\cos \angle A$.
+    \item La \textbf{TANGENTE } es el cociente entre las longitudes del cateto opuesto y el cateto adyacente al \'angulo $\angle A$ del tri\'angulo rect\'angulo. A este cociente, lo vamos a representar por $\tan \angle A$.
+\end{enumerate}
+\end{defi}
+ Ahora, motivados por la existencia de los inversos multiplicativos de n\'umeros reales positivos, tenemos la siguiente definici\'on:
+\begin{defi}[Cotangente, secante y cosecante de un \'angulo agudo]
+Dado un \'angulo agudo $\angle A$, la \textbf{cotangente} de $\angle A$, que vamos a representar por $\cot \angle A$, es el inverso multiplicativo de $\tan \angle A$, es decir, 
+\[
+\cot \angle A = \frac{1}{\tan \angle A}.
+\]
+    La \textbf{secante} de $\angle A$, que vamos a representar por $\sec \angle A$, es el inverso multiplicativo de $\cos \angle A$, es decir, 
+\[
+\sec \angle A = \frac{1}{\cos \angle  A}
+\]
+Finalmente, la \textbf{cosecante} de $\angle A$, que vamos a representar por $\csc \angle A$, es el inverso multiplicativo de $\sen \angle A$, es decir, 
+\[
+\csc \angle A = \frac{1}{\sen \angle A}
+\]
+\end{defi}
+\begin{see}
+    La definici\'on anterior es posible pues para cualquier \'angulo agudo $\theta$, se verifica que 
+    \[
+    0< \sen \theta <1 , \quad 0< \cos \theta <1 \yds \tan \theta >0.
+    \]
+\end{see}
+Con la finalidad de tener una mejor comprensi\'on del tema, a continuaci\'on presentamos dos ejercicios con su resoluci\'on:
+\begin{exer} El objetivo del siguiente ejercicio es deducir el valor del seno, coseno y tangente de cualquier \'angulo que mida $45^\circ$. Para ello, consideremos un cuadrado de lado $x$ y diagonal $d$, como se muestra en la figura:
+\begin{center}
+     \begin{tikzpicture}
+    % Activar la grilla
+   
+
+    % Dibujar el cuadrado
+    \draw[thick] (0,0) -- (4,0) -- (4,4) -- (0,4) -- cycle; % Cuadrado en azul oscuro
+
+    % Dibujar la diagonal
+    \draw[thick, red] (0,0) -- (4,4); % Diagonal en rojo
+
+    % Etiquetas de los lados
+    \node at (2,-0.3) {$x$}; % Etiqueta del lado inferior
+    \node at (4.3,2) {$x$}; % Etiqueta del lado derecho
+
+    % Etiqueta de la diagonal
+    \node at (2,2.5) {$d$}; % Etiqueta de la diagonal
+
+   
+    
+\end{tikzpicture}
+\end{center}
+
+\begin{proof}[Soluci\'on] Notemos que la
+diagonal divide al cuadrado en dos triángulos isósceles, es decir, triángulos rectángulos donde los dos ángulos
+agudos son de $45^\circ$. 
+\begin{center}
+ \begin{tikzpicture}
+    % Activar la grilla
+   
+
+    % Dibujar el cuadrado
+    \draw[thick] (0,0) -- (4,0) -- (4,4) -- (0,4) -- cycle; % Cuadrado en azul oscuro
+
+    % Dibujar la diagonal
+    \draw[thick, red] (0,0) -- (4,4); % Diagonal en rojo
+
+    % Etiquetas de los lados
+    \node at (2,-0.3) {$x$}; % Etiqueta del lado inferior
+    \node at (4.3,2) {$x$}; % Etiqueta del lado derecho
+
+    % Etiqueta de la diagonal
+    \node at (2,2.5) {$d$}; % Etiqueta de la diagonal
+
+    % Ángulos corregidos usando la técnica ++
+    \draw[thick] (0,0) ++(0.7,0) arc[start angle=0, end angle=45, radius=0.7]; % Ángulo inferior izquierdo
+    \node at (1.2,0.3) {$45^\circ$}; % Etiqueta del ángulo inferior izquierdo
+    
+    \draw[thick] (4,4) ++(-0.7,0) arc[start angle=180, end angle=225, radius=0.7]; % Ángulo superior derecho
+    \node at (2.8,3.7) {$45^\circ$}; % Etiqueta del ángulo superior derecho
+    
+\end{tikzpicture}
+\end{center}
+Usando el Teorema de Pit\'agoras, observamos que 
+\[
+d=\sqrt{x^2 + x^2} = \sqrt{2x^2} = \sqrt{2} x,
+\]
+pues es claro que $x>0$. Por tanto, por definici\'on de las razones trigonom\'etricas y dado que $x>0$ (pues es una longitud), tenemos que 
+\[
+\sen 45^\circ = \frac{x}{d} = \frac{x}{\sqrt{2}x} = \frac{1}{\sqrt{2}}.
+\]
+As\'i mismo, 
+\[
+\cos 45^\circ = \frac{x}{d} = \frac{x}{\sqrt{2}x} = \frac{1}{\sqrt{2}}.
+\]
+Y finalmente, se tiene que 
+\[
+\tan 45^\circ = \frac{x}{x} = 1.
+\]
+    
+\end{proof}
+
+    
+\end{exer}
+\begin{exer}    Si se conoce que la longitud de uno de los catetos de un  tri\'angulo rect\'angulo es un octavo de la longitud de la hipotenusa. Encontrar el valor de la \textit{cotangente} de uno de los \'angulos agudos del tri\'angulo.
+    \begin{proof}[Soluci\'on] Si denotamos por $z$ la longitud del cateto del problema, entonces la hipotenusa mide $8z$. De este modo, si $\theta$ es el \'angulo opuesto al cateto cuya longitud es $z$, se sigue que 
+    \[
+    \sen \theta = \frac{z}{8z} = \frac{1}{8},
+    \]
+    pues $z>0$.
+    Ahora, usando el Teorema de Pit\'agoras, encontramos el valor del cateto adyacente del \'angulo $\theta$, cuyo valor es 
+    \[
+    \sqrt{(8z)^2 - z^2} = \sqrt{63z^2} = 3 \sqrt{7}z
+    \]
+    Por tanto, 
+    \[
+    \tan \theta = \frac{z}{3 \sqrt{7}z} = \frac{1}{3 \sqrt{7}}.
+    \]
+    Finalmente, dado que la cotangente es el inverso multiplicativo de la tangente, concluimos que 
+    \[
+    \cot \theta = 3 \sqrt{7}.
+    \]
+        
+    \end{proof}
+\end{exer}
+En la siguiente secci\'on se presentan un listado de $10$ ejercicios, cuya finalidad es poner en pr\'actica la teor\'ia aprendida sobre las razones trigonom\'etricas en un tri\'angulo rect\'angulo. 
+\section{Ejercicios propuestos}
+
+\begin{enumerate}[leftmargin=*]
+\item La siguiente figura representa a un tri\'angulo is\'osceles. Encontrar el valor del \'angulo $\alpha$ indicado.\\
+
+\begin{center}
+\begin{tikzpicture}[scale=0.5] % Escala el dibujo sin cambiar las medidas
+    % Coordenadas de los puntos del triángulo
+    \coordinate (A) at (0,0);    % Punto A en la base izquierda
+    \coordinate (B) at (10,0);   % Punto B en la base derecha
+    \coordinate (C) at (5,9);    % Punto C, el vértice superior
+
+    % Dibujar el triángulo
+    \draw (A) -- (B) -- (C) -- cycle;
+
+    % Etiquetar los lados
+    \node[below] at (5,-0.2) {$10m$};
+    \node[left] at (2.5,4.5) {$12m$};
+    \node[right] at (7.5,4.5) {$12m$};
+
+    % Dibujar el ángulo en A
+     \draw[thick] (A) ++(0.8,0) arc[start angle=0, end angle=50, radius=1];
+    \node at (1.3,0.8) {$\alpha$};
+\end{tikzpicture}
+\end{center}
+
+
+\item El objetivo del siguiente ejercicio es deducir las principales razones trigonom\'etricas para los \'angulos de $30^\circ$ y $60^\circ$. Para ello, considere la siguiente figura:
+\begin{center}
+    \begin{tikzpicture}[scale=1.5] 
+    \coordinate (A) at (0,0);   % Punto A
+    \coordinate (B) at (2,0);   % Punto B
+    \coordinate (C) at (1,{sqrt(3)});  % Punto C 
+    \draw (A) -- (B) -- (C) -- cycle;
+
+    
+    \node[below] at (1,0) {$2 \, cm$};       
+    \node[left] at (0.3,0.9) {$2 \, cm$};    
+    \node[right] at (1.7,0.9) {$2 \, cm$}; 
+
+\end{tikzpicture}
+\end{center}
+\begin{itemize}
+    \item Trazar la altura del tri\'angulo.
+    \item Calcular el valor de dicha altura.
+    \item Calcular el valor del $\sin$, $\cos$ y $\tan$ de los \'angulos de $30^\circ$ y $60^\circ$.
+\end{itemize}
+    \item 
+Dados los triángulos rectángulos \( \triangle ABC \) y \( \triangle ECD \). ¿Cu\'al de las siguientes opciones corresponde a la definici\'on de seno del \'angulo $\beta$?  Justifique por completo  su respuesta.
+\begin{center}
+    \begin{tikzpicture}
+
+    % Coordenadas de los puntos
+    \coordinate (A) at (2,0);   % Punto A
+    \coordinate (B) at (2,3);   % Punto B
+    \coordinate (C) at (6,0);   % Punto C
+    \coordinate (D) at (0,0);  % Punto D
+    \coordinate (E) at (0,4.5);   % Punto E
+
+    % Dibujar los lados del triángulo
+    \draw[thick] (A) -- (C) -- (B) -- cycle;  % Triángulo principal ABC
+    \draw[thick] (A) -- (D) -- (E) -- (B);    % Línea auxiliar ADEB
+
+    % Etiquetas de los vértices
+    \node[below left] at (A) {$A$};
+    \node[above right] at (B) {$B$};
+    \node[below right] at (C) {$C$};
+    \node[below left] at (D) {$D$};
+    \node[above left] at (E) {$E$};
+
+    % Etiquetas de los lados
+    \node[above right] at (4,1.5) {$a$};  % Lado BC
+    \node[below] at (4,-0.2) {$b$};       % Lado AB
+    \node[below] at (2,-1) {$e$};       % Lado AD
+    \node[left] at (3,4) {$d$};       % Lado BE
+    \node[left] at (-0.2,2.2) {$n$};          % Lado DE
+    \node[right] at (2,1.3) {$m$};        % Lado AB perpendicular a BE
+
+    % Etiqueta del ángulo
+    \node at (4.5,0.4) {$\beta$};         % Ángulo en C
+
+    % Dibujar los ángulos rectos
+    \draw (A) rectangle +(0.3,0.3);       % Ángulo recto en A
+    \draw (D) rectangle +(0.3,0.3);       % Ángulo recto en D
+% Dibujar el arco del ángulo beta dentro del triángulo
+    \draw[thick] (C) ++(-0.7,0) arc[start angle=180, end angle=145, radius=0.7]; % Arco para el ángulo beta
+
+
+\end{tikzpicture}
+\end{center}
+
+
+\begin{align*}
+\text{a)} & \quad \sen \beta = \frac{e}{d} \quad \text{y} \quad \sen \beta = \frac{b}{a}. \\
+\text{b)} & \quad \sen \beta = \frac{n}{d} \quad \text{y} \quad \sen \beta = \frac{m}{a}. \\
+\text{c)} & \quad \sen \beta = \frac{m}{b} \quad \text{y} \quad \sen \beta = \frac{n}{e}.
+\end{align*}
+\item ¿Cuál de las siguientes expresiones representa la definición de \textit{tangente} del ángulo \( \beta \) dado el triángulo \( \triangle ABC \)? Justifique su respuesta.
+
+\begin{center}
+    \begin{tikzpicture}
+    % Dibujar la grilla
+    
+    
+    % Coordenadas de los puntos
+    \coordinate (A) at (2,0);   % Punto A
+    \coordinate (B) at (2,3);   % Punto B
+    \coordinate (C) at (6,0);   % Punto C
+
+    % Dibujar los lados del triángulo en diferentes colores
+    \draw[thick, red] (A) -- (B);  % Lado AB en rojo
+    \draw[thick, blue] (B) -- (C);  % Lado BC en azul
+    \draw[thick, green] (C) -- (A);  % Lado CA en verde
+
+    % Etiquetas de los vértices
+    \node[below left] at (A) {$A$};
+    \node[above right] at (B) {$B$};
+    \node[below right] at (C) {$C$};
+ \node[above right] at (4,1.5) {$a$};  % Lado BC
+    \node[below] at (4,-0.2) {$b$};       % Lado AB
+    \node[below] at (1.7,1.5) {$c$};  
+    % Etiqueta del ángulo
+    \node at (4.5,0.4) {$\beta$};          % Ángulo en C
+
+    % Dibujar el ángulo recto
+    \draw (A) rectangle +(0.3,0.3);        % Ángulo recto en A
+
+    % Dibujar el arco del ángulo beta dentro del triángulo
+     \draw[thick] (C) ++(-0.7,0) arc[start angle=180, end angle=145, radius=0.7];
+
+\end{tikzpicture}
+\end{center}
+  
+
+\begin{enumerate}
+    \item[(a)]  \( \frac{b}{a} \)
+    \item[(b)] \( \frac{b}{c} \)
+    \item[(c)] \( \frac{c}{b} \)
+\end{enumerate}
+\item 
+Si la \textit{cosecante} del ángulo $\theta$ es $\left(\frac{b}{c}\right)$, dado el triángulo $\triangle BCD$, ¿cuál es el valor de \textit{seno} del ángulo $\theta$?
+\begin{center}
+    \begin{tikzpicture}
+    
+    
+    % Coordenadas de los puntos centrados
+    \coordinate (A) at (2,0);   % Punto A
+    \coordinate (B) at (2,-3);  % Punto B
+    \coordinate (C) at (-2,0);   % Punto C
+
+    % Dibujar los lados del triángulo sin colores
+    \draw[thick] (A) -- (B);  % Lado AB
+    \draw[thick] (B) -- (C);  % Lado BC
+    \draw[thick] (C) -- (A);  % Lado CA
+
+    % Etiquetas de los vértices
+    \node[below left] at (A) {$A$};
+    \node[below right] at (B) {$B$};
+    \node[below left] at (C) {$C$};
+    
+    % Etiquetas de los lados
+    \node[above right] at (2,-1.5) {$c$};  % Lado BC
+    \node[below] at (0.4,0.8) {$b$};         % Lado AB
+    \node[above left] at (-0.3,-1.7) {$a$};  % Lado CA
+
+    % Etiqueta del ángulo
+    \node at (-1,-0.3) {$\theta$};          % Ángulo en C
+
+
+    % Dibujar el arco del ángulo beta dentro del triángulo
+    \draw[thick] (C) ++(0.7,0) arc[start angle=360, end angle=322, radius=0.7];
+
+\end{tikzpicture}
+\end{center}
+\item Determinar la altura correspondiente al lado $GK$ del triángulo $\triangle GMK$, si se conoce que  $GM = 15$ y $\cos \angle G = 0.8$.
+\begin{center}
+  \begin{tikzpicture}
+    % Dibujar la grilla
+    
+    
+    % Dibujar los puntos del triángulo
+    \coordinate (G) at (-1,0);   % Punto G
+    \coordinate (M) at (1,3);   % Punto M
+    \coordinate (K) at (6,0);   % Punto K
+
+    % Dibujar los lados del triángulo
+    \draw[thick, blue] (G) -- (M);  % Lado GM
+    \draw[thick, gray] (M) -- (K);  % Lado MK
+    \draw[thick, gray] (G) -- (K);  % Lado GK
+
+    % Etiquetas de los vértices
+    \node[below left] at (G) {$G$};
+    \node[above] at (M) {$M$};
+    \node[below right] at (K) {$K$};
+
+    % Dibujar el arco en el ángulo en G
+    \draw[thick] (G) ++(0.4,0) arc[start angle=0, end angle=57, radius=0.4];
+
+\end{tikzpicture}
+\end{center}
+\item Encontrar la longitud del cateto adyacente y la hipotenusa de un triángulo rectángulo, si se conoce que la razón trigonométrica $\sin \angle A = \frac{3}{5}$ y la longitud del cateto opuesto a $\angle A$ es $9$.
+
+\item Considere la siguiente figura cuyo \'angulo recto es en $C$. Calcular las razones trigonom\'etricas $\sen$, $\cos$ y $\tan$ del \'angulo $A$, si el lado $c=12cm$ y el lado $b=7cm$
+\begin{center}
+    \begin{tikzpicture}
+    % Dibujar la grilla
+    
+   
+    % Dibujar los puntos del triángulo
+    \coordinate (C) at (-1.5,0.3);   % Punto G
+    \coordinate (A) at (1,3);    % Punto M
+    \coordinate (K) at (6,0);    % Punto K
+
+    % Dibujar los lados del triángulo
+    \draw[thick, blue] (C) -- (A);  % Lado GM
+    \draw[thick, gray] (A) -- (B);  % Lado MK
+    \draw[thick, gray] (C) -- (B);  % Lado GK
+
+    % Etiquetas de los vértices
+    \node[below left] at (C) {$C$};
+    \node[above] at (M) {$A$};
+    \node[below right] at (B) {$B$};
+
+   
+% Etiquetas de los lados
+    \node[above right] at (2,0) {$c$};  % Lado BC
+    \node[below] at (-0.4,2.3) {$b$};         % Lado AB
+    \node[above left] at (-0.3,-1.7) {$a$};
+    % 
+
+\end{tikzpicture}
+\end{center}
+El objetivo de los siguientes ejercicios es mostrar la aplicaci\'on de las razones trigonom\'etricas en problemas pr\'acticos:
+\item Suponga que un individuo se ubica a $5 \, m$ de la base de un edificio y el \'angulo con el que observa la parte m\'as alta  de una torre es de $32^\circ$. Calcular la altura de la torre, si la persona tiene una estatura de $1,72 \, m$.
+\item 
+Desde una determinada distancia, una bandera situada en la parte superior de una torre se observa con un ángulo de elevaci\'on de $50^\circ$. Si nos acercamos $18 \, m$  en direcci\'on de la torre, la bandera se logra observar ahora con un ángulo de elevaci\'on 
+ de $80^\circ$. Calcular la altura a la que se encuentra la bandera.
+
+
+\end{enumerate}
+Para finalizar la presentaci\'on, se muestra una soluci\'on alternativa a los ejercicios.
+\section{Soluci\'on de los ejercicios propuestos}
+\begin{enumerate}[leftmargin=*]
+    \item  La siguiente figura representa a un tri\'angulo is\'osceles. Encontrar el valor del \'angulo indicado.
+    \begin{center}
+\begin{tikzpicture}[scale=0.5] % Escala el dibujo sin cambiar las medidas
+    % Coordenadas de los puntos del triángulo
+    \coordinate (A) at (0,0);    % Punto A en la base izquierda
+    \coordinate (B) at (10,0);   % Punto B en la base derecha
+    \coordinate (C) at (5,9);    % Punto C, el vértice superior
+
+    % Dibujar el triángulo
+    \draw (A) -- (B) -- (C) -- cycle;
+
+    % Etiquetar los lados
+    \node[below] at (5,-0.2) {$10 \, m$};
+    \node[left] at (2.5,4.5) {$12 \, m$};
+    \node[right] at (7.5,4.5) {$12 \, m$};
+
+    % Dibujar el ángulo en A
+     \draw[thick] (A) ++(0.8,0) arc[start angle=0, end angle=50, radius=1];
+    \node at (1.3,0.8) {$\alpha$};
+\end{tikzpicture}
+\end{center}
+    \begin{proof}[Soluci\'on]
+        Es importante tener en cuenta las propiedades de un tri\'angulo is\'osceles, es por ello que procedemos de la siguiente manera:
+        \begin{enumerate}
+            \item Trazamos la altura del tr\'iangulo, lo cual nos va a permitir obtener en la base dos segmentos de igual longitud, en este caso de $5m$ cada uno, como se muestra en la imagen a continuaci\'on.
+            \begin{center}
+\begin{tikzpicture}[scale=0.5] % Escala el dibujo sin cambiar las medidas
+    % Coordenadas de los puntos del triángulo
+    \coordinate (A) at (0,0);    % Punto A en la base izquierda
+    \coordinate (B) at (10,0);   % Punto B en la base derecha
+    \coordinate (C) at (5,9);    % Punto C, el vértice superior
+    \coordinate (M) at (5,0);    % Punto medio de la base
+
+    % Dibujar el triángulo
+    \draw (A) -- (B) -- (C) -- cycle;
+
+    % Dibujar la recta que divide la base
+    \draw[dashed] (M) -- (C);   % Línea desde el punto medio de la base hasta el vértice superior
+
+    % Etiquetar los lados
+    \node[below] at (2.5,-0.2) {$5 \, m$}; % Etiqueta para el segmento izquierdo
+    \node[below] at (7.5,-0.2) {$5 \ m$}; % Etiqueta para el segmento derecho
+    \node[left] at (2.5,4.5) {$12\,m$};
+    \node[right] at (7.5,4.5) {$12\, m$};
+
+    % Dibujar el ángulo en A
+    \draw[thick] (A) ++(0.8,0) arc[start angle=0, end angle=50, radius=1];
+    \node at (1.3,0.8) {$\alpha$};
+\end{tikzpicture}
+\end{center}
+\item Observamos que hemos obtenido dos tri\'angulos rect\'angulos, nos enfocaremos en el del lado izquierdo puesto que ah\'i se encuentra nuestra inc\'ognita a encontrar: el \'angulo $\alpha$. Para ello, tenemos el siguiente gr\'afico:
+\begin{center}
+\begin{tikzpicture}[scale=0.5] % Escala el dibujo sin cambiar las medidas
+    % Coordenadas de los puntos del triángulo pequeño
+    \coordinate (A) at (0,0);    % Punto A en la base izquierda
+    \coordinate (M) at (5,0);    % Punto medio de la base
+    \coordinate (C) at (5,9);    % Punto C, el vértice superior
+
+    % Dibujar el triángulo rectángulo pequeño
+    \draw (A) -- (M) -- (C) -- cycle;
+
+    % Etiquetar los lados
+    \node[below] at (2.5,-0.2) {$5 \, m$}; % Etiqueta para la base pequeña
+    \node[left] at (2.5,4.5) {$12 \, m$};  % Etiqueta para el lado izquierdo
+      % Dibujar el ángulo en A
+    \draw[thick] (A) ++(0.8,0) arc[start angle=0, end angle=50, radius=1];
+    \node at (1.3,0.8) {$\alpha$};
+
+    
+\end{tikzpicture}
+\end{center}
+\item Recordando que la raz\'on trigonom\'etrica que relaciona el cateto adyacente y la hipotenusa de un tri\'angulo rect\'angulo es el coseno, tenemos lo siguiente:
+\[
+\cos \alpha = \frac{5}{12}.
+\]
+De esto, logramos obtener que 
+\[
+\alpha = 65.38^\circ.
+\]
+        \end{enumerate}
+    \end{proof}
+    \item El objetivo del siguiente ejercicio es deducir las principales razones trigonom\'etricas para los \'angulos de $30^\circ$ y $60^\circ$. Para ello, considere la siguiente figura:
+\begin{center}
+    \begin{tikzpicture}[scale=1.5] 
+    \coordinate (A) at (0,0);   % Punto A
+    \coordinate (B) at (2,0);   % Punto B
+    \coordinate (C) at (1,{sqrt(3)});  % Punto C 
+    \draw (A) -- (B) -- (C) -- cycle;
+
+    
+    \node[below] at (1,0) {$2 \,cm$};       
+    \node[left] at (0.3,0.9) {$2 \,cm$};    
+    \node[right] at (1.7,0.9) {$2\, cm$}; 
+
+\end{tikzpicture}
+\end{center}
+\begin{itemize}
+    \item Trazar la altura del tri\'angulo.
+    \begin{proof}[Soluci\'on]Se divide la base en dos partes iguales de $1 cm$ cada uno, obteniendo lo siguiente:
+    \begin{center}
+    \begin{tikzpicture}[scale=1.5] 
+    % Coordenadas de los puntos del triángulo equilátero
+    \coordinate (A) at (0,0);   % Punto A
+    \coordinate (B) at (2,0);   % Punto B
+    \coordinate (C) at (1,{sqrt(3)});  % Punto C (vértice superior)
+    \coordinate (M) at (1,0);   % Punto medio de la base
+
+    % Dibujar el triángulo equilátero
+    \draw (A) -- (B) -- (C) -- cycle;
+
+    % Dibujar la altura
+    \draw[dashed] (C) -- (M);   % Línea de la altura (dashed = discontinua)
+
+    % Etiquetar los lados
+
+    \node[left] at (0.3,0.9) {$2 \, cm$};     % Etiqueta para el lado izquierdo
+    \node[right] at (1.7,0.9) {$2 \, cm$};    % Etiqueta para el lado derecho
+
+    % Etiquetar los segmentos de 1 cm en la base
+    \node[below] at (0.5,-0.1) {$1\, cm$};   % Segmento izquierdo
+    \node[below] at (1.5,-0.1) {$1\, cm$};   % Segmento derecho
+
+\end{tikzpicture}
+\end{center}
+
+        
+    \end{proof}
+    \item Calcular el valor de dicha altura.
+    \begin{proof}[Soluci\'on] Si denotamos por $h$ a la altura del tri\'angulo, entonces usamos el Teorema de Pit\'agoras para encontrar dicho valor. Es as\'i que,
+    \[
+    2^2 = 1^2 +h^2,
+    \]
+    por lo cual $h = \sqrt{3}.$
+    \end{proof}
+    \item Calcular el valor del $\sin$, $\cos$ y $\tan$ de los \'angulos de $30^\circ$ y $60^\circ$.
+    \begin{proof}[Soluci\'on]
+    Notemos que estamos trabajando con el siguiente tri\'angulo rect\'angulo:
+    \begin{center}
+    \begin{tikzpicture}[scale=2.5] 
+    
+
+    % Coordenadas de los puntos del triángulo rectángulo
+    \coordinate (A) at (0,0);    % Punto A
+    \coordinate (M) at (1,0);    % Punto medio de la base
+    \coordinate (C) at (1,{sqrt(3)});  % Punto C (vértice superior)
+
+    % Dibujar el triángulo rectángulo
+    \draw (A) -- (M) -- (C) -- cycle;
+
+    % Etiquetar los lados
+    \node[below] at (0.5,-0.1) {$1 cm$};   % Segmento de la base
+    \node[left] at (0.3,0.9) {$2 cm$};     % Lado izquierdo (hipotenusa)
+    \node[right] at (1.1,0.7) {$\sqrt{3}cm$};       % Altura
+
+    % Dibujar los arcos de los ángulos
+    \draw[thick] (A) ++(0.2,0) arc[start angle=0, end angle=30, radius=0.5];   % Arco para theta
+    \draw[thick] (C) ++(0,-0.3) arc[start angle=270, end angle=251, radius=0.5];  % Arco para beta
+    \draw[thick] (M) ++(-0.2,0) -- ++(0.2,0) -- ++(0,0.2);  % Ángulo recto
+
+    % Etiquetar los ángulos
+    \node at (0.3,0.15) {$\theta$};  % Etiqueta para theta
+    \node at (0.85,1.2) {$\beta$};    % Etiqueta para beta
+\end{tikzpicture}
+\end{center}
+    No es dif\'icil verificar que $\theta$ corresponde al \'angulo de $60^\circ$, mientras que $\beta$ corresponde al \'angulo de $30^\circ$. En consecuencia, tenemos que 
+    \[
+    \sen 30^\circ = \frac{1}{2}, \quad \cos 30^\circ = \frac{\sqrt{3}}{2} \yds \tan 30^\circ = \frac{1}{\sqrt{3}}.
+    \]
+    Por otro lado, se obtiene que 
+    \[
+    \sen 60^\circ = \frac{\sqrt{3}}{2}, \quad \cos 60^\circ = \frac{1}{2} \yds \tan 60^\circ = \sqrt{3}.
+    \]
+    \end{proof}
+\end{itemize}
+\item Dados los triángulos rectángulos \( \triangle ABC \) y \( \triangle ECD \). ¿Cu\'al de las siguientes opciones corresponde a la definici\'on de seno del \'angulo $\beta$?  Justifique por completo  su respuesta.
+\begin{center}
+    \begin{tikzpicture}
+
+    % Coordenadas de los puntos
+    \coordinate (A) at (2,0);   % Punto A
+    \coordinate (B) at (2,3);   % Punto B
+    \coordinate (C) at (6,0);   % Punto C
+    \coordinate (D) at (0,0);  % Punto D
+    \coordinate (E) at (0,4.5);   % Punto E
+
+    % Dibujar los lados del triángulo
+    \draw[thick] (A) -- (C) -- (B) -- cycle;  % Triángulo principal ABC
+    \draw[thick] (A) -- (D) -- (E) -- (B);    % Línea auxiliar ADEB
+
+    % Etiquetas de los vértices
+    \node[below left] at (A) {$A$};
+    \node[above right] at (B) {$B$};
+    \node[below right] at (C) {$C$};
+    \node[below left] at (D) {$D$};
+    \node[above left] at (E) {$E$};
+
+    % Etiquetas de los lados
+    \node[above right] at (4,1.5) {$a$};  % Lado BC
+    \node[below] at (4,-0.2) {$b$};       % Lado AB
+    \node[below] at (2,-1) {$e$};       % Lado AD
+    \node[left] at (3,4) {$d$};       % Lado BE
+    \node[left] at (-0.2,2.2) {$n$};          % Lado DE
+    \node[right] at (2,1.3) {$m$};        % Lado AB perpendicular a BE
+
+    % Etiqueta del ángulo
+    \node at (4.5,0.4) {$\beta$};         % Ángulo en C
+
+    % Dibujar los ángulos rectos
+    \draw (A) rectangle +(0.3,0.3);       % Ángulo recto en A
+    \draw (D) rectangle +(0.3,0.3);       % Ángulo recto en D
+% Dibujar el arco del ángulo beta dentro del triángulo
+    \draw[thick] (C) ++(-0.7,0) arc[start angle=180, end angle=145, radius=0.7]; % Arco para el ángulo beta
+
+
+\end{tikzpicture}
+\end{center}
+
+
+    
+\begin{align*}
+\text{a)} & \quad \sen \beta = \frac{e}{d} \quad \text{y} \quad \sen \beta = \frac{b}{a}. \\
+\text{b)} & \quad \sen \beta = \frac{n}{d} \quad \text{y} \quad \sen \beta = \frac{m}{a}. \\
+\text{c)} & \quad \sen \beta = \frac{m}{b} \quad \text{y} \quad \sen \beta = \frac{n}{e}.
+\end{align*}
+
+\begin{proof}[Soluci\'on]
+    La respuesta correcta es la opci\'on $b)$. En efecto, recordar que si en primer lugar consideramos el tri\'angulo $ECD$, entonces para $\beta$ el cateto opuesto es $n$ y la hipotenusa es $d$. Por otro lado, si ahora fijamos nuestra atenci\'on en el tri\'angulo $ABC$, entonces el cateto opuesto para $\beta$ es $m$, mientras que la hipotenusa es $a$. 
+\end{proof}
+\item ¿Cuál de las siguientes expresiones representa la definición de \textit{tangente} del ángulo \( \beta \) dado el triángulo \( \triangle ABC \)? Justifique su respuesta.
+
+\begin{center}
+    \begin{tikzpicture}
+    % Dibujar la grilla
+    
+    
+    % Coordenadas de los puntos
+    \coordinate (A) at (2,0);   % Punto A
+    \coordinate (B) at (2,3);   % Punto B
+    \coordinate (C) at (6,0);   % Punto C
+
+    % Dibujar los lados del triángulo en diferentes colores
+    \draw[thick, red] (A) -- (B);  % Lado AB en rojo
+    \draw[thick, blue] (B) -- (C);  % Lado BC en azul
+    \draw[thick, green] (C) -- (A);  % Lado CA en verde
+
+    % Etiquetas de los vértices
+    \node[below left] at (A) {$A$};
+    \node[above right] at (B) {$B$};
+    \node[below right] at (C) {$C$};
+ \node[above right] at (4,1.5) {$a$};  % Lado BC
+    \node[below] at (4,-0.2) {$b$};       % Lado AB
+    \node[below] at (1.7,1.5) {$c$};  
+    % Etiqueta del ángulo
+    \node at (4.5,0.4) {$\beta$};          % Ángulo en C
+
+    % Dibujar el ángulo recto
+    \draw (A) rectangle +(0.3,0.3);        % Ángulo recto en A
+
+    % Dibujar el arco del ángulo beta dentro del triángulo
+     \draw[thick] (C) ++(-0.7,0) arc[start angle=180, end angle=145, radius=0.7];
+
+\end{tikzpicture}
+\end{center}
+  
+
+\begin{enumerate}
+    \item[(a)] \( \frac{b}{a} \)
+    \item[(b)] \( \frac{b}{c} \)
+    \item[(c)] \( \frac{c}{b} \)
+\end{enumerate}
+\begin{proof}[Soluci\'on] Conocemos que la tangente de un \'angulo relaciona el cateto opuesto y el cateto adyacente. Con esto en mente, nos fijamos en $\beta$, de modo que el cateto opuesto correspondiente es $c$ y el cateto  adyacente es $b$. En consecuencia, la respuesta correcta es $c)$
+    
+\end{proof}
+\item Si la \textit{cosecante} del ángulo $\theta$ es $\left(\frac{a}{c}\right)$, dado el triángulo $\triangle ABC$, ¿cuál es el valor de \textit{seno} del ángulo $\theta$?
+\begin{center}
+    \begin{tikzpicture}
+    
+    
+    % Coordenadas de los puntos centrados
+    \coordinate (A) at (2,0);   % Punto A
+    \coordinate (B) at (2,-3);  % Punto B
+    \coordinate (C) at (-2,0);   % Punto C
+
+    % Dibujar los lados del triángulo sin colores
+    \draw[thick] (A) -- (B);  % Lado AB
+    \draw[thick] (B) -- (C);  % Lado BC
+    \draw[thick] (C) -- (A);  % Lado CA
+
+    % Etiquetas de los vértices
+    \node[below left] at (A) {$A$};
+    \node[below right] at (B) {$B$};
+    \node[below left] at (C) {$C$};
+    
+    % Etiquetas de los lados
+    \node[above right] at (2,-1.5) {$c$};  % Lado BC
+    \node[below] at (0.4,0.8) {$b$};         % Lado AB
+    \node[above left] at (-0.3,-1.7) {$a$};  % Lado CA
+
+    % Etiqueta del ángulo
+    \node at (-1,-0.3) {$\theta$};          % Ángulo en C
+
+
+    % Dibujar el arco del ángulo beta dentro del triángulo
+    \draw[thick] (C) ++(0.7,0) arc[start angle=360, end angle=322, radius=0.7];
+
+\end{tikzpicture}
+\end{center}
+\begin{proof}[Soluci\'on]
+    Como la cosecante es el inverso multiplicativo de seno, tenemos que:
+    \[
+    \csc \theta = \frac{1}{\sen \theta} = \frac{a}{c}
+    \]
+    entonces 
+    \[
+    \sen  \theta = \frac{c}{a}
+    \]
+\end{proof}
+\item Determinar la altura correspondiente al lado $GK$ del triángulo $\triangle GMK$, si se conoce que  $GM = 15$ y $\cos \angle G = 0.8$.
+\begin{center}
+  \begin{tikzpicture}
+    % Dibujar la grilla
+    
+    
+    % Dibujar los puntos del triángulo
+    \coordinate (G) at (-1,0);   % Punto G
+    \coordinate (M) at (1,3);   % Punto M
+    \coordinate (K) at (6,0);   % Punto K
+
+    % Dibujar los lados del triángulo
+    \draw[thick, blue] (G) -- (M);  % Lado GM
+    \draw[thick, gray] (M) -- (K);  % Lado MK
+    \draw[thick, gray] (G) -- (K);  % Lado GK
+
+    % Etiquetas de los vértices
+    \node[below left] at (G) {G};
+    \node[above] at (M) {M};
+    \node[below right] at (K) {K};
+
+    % Dibujar el arco en el ángulo en G
+    \draw[thick] (G) ++(0.4,0) arc[start angle=0, end angle=57, radius=0.4];
+
+\end{tikzpicture}
+\end{center}
+\begin{proof}[Soluci\'on]
+    Notemos que si trazamos la altura del tri\'angulo correspondiente, se obtiene que
+    \begin{center}
+  \begin{tikzpicture}
+    
+    
+    % Dibujar los puntos del triángulo
+    \coordinate (G) at (-1,0);   % Punto G
+    \coordinate (M) at (1,3);    % Punto M
+    \coordinate (K) at (6,0);    % Punto K
+    \coordinate (H) at (1,0);    % Punto H, la proyección de M en la base GK
+
+    % Dibujar los lados del triángulo
+    \draw[thick, blue] (G) -- (M);  % Lado GM
+    \draw[thick, gray] (M) -- (K);  % Lado MK
+    \draw[thick, gray] (G) -- (K);  % Lado GK
+
+    % Dibujar la altura (M a H)
+    \draw[dashed, red] (M) -- (H);  % Altura desde M a GK
+
+    % Etiquetas de los vértices
+    \node[below left] at (G) {G};
+    \node[above] at (M) {M};
+    \node[below right] at (K) {K};
+    \node[below] at (H) {H};  % Etiqueta para el pie de la altura
+
+    % Dibujar el arco en el ángulo en G
+    \draw[thick] (G) ++(0.4,0) arc[start angle=0, end angle=57, radius=0.4];
+
+    % Indicar que el ángulo en H es recto
+    \draw[thick] (H) ++(-0.2,0) -- ++(0.2,0) -- ++(0,0.2);
+
+  \end{tikzpicture}
+\end{center}
+Ahora bien, se ha obtenido un $\triangle $ rect\'angulo $GMH$. La idea es utilizar las hip\'otesis que tenemos, es as\'i que 
+\[
+\cos \angle G = 0.8 = \frac{GH}{GM}
+\]
+Por tanto, hemos obtenido que 
+\[
+0,8 \cdot GM = GH.
+\]
+Usando el hecho de que $GM=12$, se sigue que $GH=9.6$.
+Finalmente, hallamos la altura usando el teorema de Pitágoras:
+\[
+GM^2 = GH^2 + MH^2
+\]
+Por tanto, 
+\[
+MH= \sqrt{ 12^2 - 9.6^2}=7.2
+\]
+\end{proof}
+\item Encontrar la longitud del cateto adyacente y la hipotenusa de un triángulo rectángulo, si se conoce que la razón trigonométrica $\sin \angle A = \frac{3}{5}$ y la longitud del cateto opuesto a $\angle A$ es $9$.
+\begin{proof}[Soluci\'on]
+    Usaremos
+la definición seno, es por ello que debemos en primer lugar, realizar lo siguiente:
+\[
+\sen \angle A = \frac{3}{5} = \frac{3 \cdot  3}{5 \cdot 5} = \frac{9}{15}.
+\]
+De donde, podemos inferir que el valor de la hipotenusa es $15$. Finalmente, por el Teorema de Pit\'agoras se obtiene el valor del cateto adyacente y viene dado por 
+\[
+a = \sqrt{15^2 - 9^2} = 12. 
+\]
+\end{proof}
+\item Considere la siguiente figura cuyo \'angulo recto es en $C$. Calcular las razones trigonom\'etricas $\sen$, $\cos$ y $\tan$ del \'angulo $A$, si el lado $c=12cm$ y el lado $b=7cm$
+\begin{center}
+    \begin{tikzpicture}
+    % Dibujar la grilla
+    
+   
+    % Dibujar los puntos del triángulo
+    \coordinate (C) at (-1.5,0.3);   % Punto G
+    \coordinate (A) at (1,3);    % Punto M
+    \coordinate (K) at (6,0);    % Punto K
+
+    % Dibujar los lados del triángulo
+    \draw[thick, blue] (C) -- (A);  % Lado GM
+    \draw[thick, gray] (A) -- (B);  % Lado MK
+    \draw[thick, gray] (C) -- (B);  % Lado GK
+
+    % Etiquetas de los vértices
+    \node[below left] at (C) {$C$};
+    \node[above] at (M) {$A$};
+    \node[below right] at (B) {$B$};
+
+   
+% Etiquetas de los lados
+    \node[above right] at (2,0) {$c$};  % Lado BC
+    \node[below] at (-0.4,2.3) {$b$};         % Lado AB
+    \node[above left] at (-0.3,-1.7) {$a$};
+    % 
+
+\end{tikzpicture}
+\end{center}
+\begin{proof}[Soluci\'on]
+    Resulta inmediato de la definici\'on de razones trigonom\'etricas de un \'angulo.  Sin embargo, en primer lugar debemos hacer uso del Teorema de Pit\'agoras para poder encontrar el valor de $a$. As\'i, 
+    \[
+    a = \sqrt{c^2 - b^2} = \sqrt{12^2-7^2}= \sqrt{95} \, cm.
+    \]
+    Por tanto, tenemos que 
+    \[
+    \sin A = \frac{a}{c} = \frac{\sqrt{95}}{12} \]
+    de la misma manera, 
+    \[
+    \cos A = \frac{b}{c} = \frac{7}{12}  \]
+    y finalmente, obtenemos
+    \[\tan A = \frac{a}{b}= \frac{\sqrt{95}}{7}
+    \]
+\end{proof}
+\item Suponga que un individuo se ubica a $5 \, m$ de la base de un edificio y el \'angulo con el que observa la parte m\'as alta  de una torre es de $32^\circ$. Calcular la altura de la torre, si la persona tiene una estatura de $1,72 \, m$.
+\begin{proof}[Soluc\'on] A partir de los datos, tenemos el siguiente gr\'afico:
+    \begin{center}
+        \begin{tikzpicture}
+         
+    % Dibujar la base, torre y la hipotenusa
+    \draw[dashed] (0.3,1.75) -- (5,1.75); % Línea de base
+    \draw[thick] (5,0) -- (5,5); % Torre vertical
+    \draw[dashed] (0.3,1.75) -- (5,5); % Hipotenusa (línea de visión)
+     \draw[green, thick] (0,-0.05) to[out=80,in=180] (-0.5,0)
+                        to[out=0,in=200] (0.6,-0.05)
+                        to[out=20,in=200] (1,0.05)
+                        to[out=0,in=190] (1.4,-0.05)
+                        to[out=10,in=180] (2.2,0.1)
+                        to[out=0,in=180] (3,0.05)
+                        to[out=0,in=180] (4,0.1)
+                        to[out=0,in=200] (5,0);
+    % Dibujar el ángulo recto en la base de la torre
+    \draw[thick] (5,1.75) -- (4.7,1.75) -- (4.7,2.05) -- (5,2.05) -- cycle; % Cuadro del ángulo recto
+    
+    % Etiquetas
+    \node at (2.5,1.4) {5m}; % Etiqueta de la base
+    \node at (5.5,3.5) {$x$}; % Etiqueta de la altura de la torre
+    \node at (5.9,0.6) {1.72m}; % Etiqueta de la altura del observador
+    
+    
+    % Etiqueta del ángulo de elevación
+   
+    \node at (1.5,2.2) {$32^\circ$}; % Etiqueta del ángulo de elevación
+    
+    % Dibujar la persona
+    \draw[thick] (0,1.72) circle (0.2); % Cabeza
+    \draw[thick] (0,1.5) -- (0,0.7); % Cuerpo
+    \draw[thick] (-0.3,1.3) -- (0,1.2) -- (0.3,1.3); % Brazos
+    \draw[thick] (0,0.7) -- (-0.3,0); % Pierna izquierda
+    \draw[thick] (0,0.7) -- (0.3,0);  % Pierna derecha
+\end{tikzpicture}
+    \end{center}
+    Notamos que si denotamos por $h$ a la altura de la torre, entonces la podemos calcular de la siguiente manera
+    \[
+    h=x+ 1.72
+    \]
+    Por lo cual, nuestro objetivo es encontrar el valor de $x$. Si nos fijamos bien se ha formado un tri\'angulo rect\'angulo. Ahora, utilizamos la raz\'on trigonom\'etrica tangente para relacionar el cateto opuesto y adyacente del \'angulo $32^\circ$. As\'i,
+    \[
+    \tan 32^\circ = \frac{x}{5}
+    \]
+    lo que implica que 
+    \[
+    x = 5 \cdot \tan 32^\circ = 3.12 m
+    \]
+    Finalmente, la altura de la torre viene dada por 
+    \[
+    h = 3.12 + 1.72 = 4.84 \, m.
+    \]
+\end{proof}
+\item Desde una determinada distancia, una bandera situada en la parte superior de una torre se observa con un ángulo de elevaci\'on de $50^\circ$. Si nos acercamos $18 \, m$  en direcci\'on de la torre, la bandera se logra observar ahora con un ángulo de elevaci\'on 
+ de $80\circ$. Calcular la altura a la que se encuentra la bandera.
+\begin{proof}
+    Tenemos el siguiente gr\'afico en base a los datos del problema:
+    \begin{center}
+        \begin{tikzpicture}
+  
+    
+    % Dibujar el triángulo principal
+    \draw[thick, green] (0,0) -- (5,0) -- (5,4.5) -- cycle; % Lados del triángulo (a en verde)
+    \draw[thick, red] (3,0) -- (5,4.5); % Hipotenusa secundaria (b en rojo)
+    
+    % Dibujar la torre
+    \draw[thick, gray] (5.01,0) -- (5.01,4.5); % Torre en gris
+    
+    % Dibujar la línea de base adicional desde la torre (línea x)
+    \draw[thick, brown] (5,0) -- (3,0); % Línea adicional (x en marrón)
+    
+    % Dibujar la bandera en la torre (forma ondulada)
+    \draw[thick, black] (5,4.5) -- (5,5.5); % Poste de la bandera
+    \draw[thick, blue!80!red] (5,5.5) -- (5.5,5.4) -- (5,5.3) -- (5.5,5.2) -- (5,5.1); % Bandera en rojo y amarillo ondulada
+    
+    % Etiquetas
+    \node at (2,-0.3) {$18m$}; % Longitud de la base (x)
+    \node at (5.3,2.5) {$h$}; % Altura de la torre
+    \node at (2.5,2.8) {$a$}; % Hipotenusa verde
+    \node at (3.5,2) {$b$}; % Hipotenusa roja
+    
+    % Ángulos
+    
+    \node at (1.3,0.3) {$\alpha = 50^\circ$}; % Etiqueta del ángulo alfa
+    
+    
+    \node[red] at (4,0.3) {$\beta = 80^\circ$}; % Etiqueta del ángulo beta
+    
+    % Etiqueta de x
+    \node[brown] at (4,-0.3) {$x$}; % Etiqueta de la base (x en marrón)
+    
+    % Colores de la bandera
+    \fill[blue] (5,5.5) -- (5.5,5.4) -- (5,5.3); % Parte roja de la bandera
+    \fill[red] (5,5.3) -- (5.5,5.2) -- (5,5.1); % Parte amarilla de la bandera
+    
+\end{tikzpicture}
+
+    \end{center}
+    De este modo, empleamos en primer lugar la raz\'on trigonm\'etrica tangente para $\alpha$. As\'i, 
+    \[
+    \tan \alpha = \frac{h}{18 + x}
+    \]
+    Luego, despejamos el valor de $x$, y as\'i obtenemos que 
+    \begin{equation}\label{a}
+         x= \frac{h}{\tan \alpha} - 18
+    \end{equation}
+    Realizamos lo mismo para el \'angulo $\beta$.  As\'i tenemos que \[
+    \tan \beta = \frac{h}{x}
+    \]
+    de donde \[
+    h= x \cdot \tan \beta
+    \]
+   Reemplazamos  \eqref{a} en la igualdad precedente con lo que obtenemos 
+   \[
+   h = \left( \frac{h}{\tan \alpha} - 18 \right) \cdot \tan \beta
+   \]
+   Ahora, notar que $\tan \alpha$ y $\tan \beta$ son conocidos y la inc\'ognita es $h$, de este modo, despejamos para obtener su valor. Por tanto, 
+   \begin{align*}
+       h
+       &\ = \frac{-18 \cdot \tan \beta}{1- \frac{\tan \beta}{\tan \alpha}}\\
+       &\ = \frac{-18 \cdot \tan 80^\circ}{1- \frac{\tan 80^\circ}{\tan 50^\circ}}\\
+       &\ = 27.16 \, m
+   \end{align*}
+   Es decir, la altura a la que se encuentra la bandera es de $27.16 \, m$.
+\end{proof}
+\end{enumerate}
+    
+\end{document}
